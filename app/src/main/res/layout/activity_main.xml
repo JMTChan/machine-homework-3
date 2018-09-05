@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Type of Burger:" />
+
+    <RadioGroup
+        android:id="@+id/type_group"
+        android:layout_below="@id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/chicken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chicken"
+            />
+
+        <RadioButton
+            android:id="@+id/beef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beef"
+             />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_below="@id/type_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Add-ons: "/>
+
+    <CheckBox
+        android:id="@+id/bacon_checkBox"
+        android:layout_below="@id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckedBox"
+        android:text="Bacon"/>
+    <CheckBox
+        android:id="@+id/pineapple_checkBox"
+        android:layout_below="@id/bacon_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckedBox"
+        android:text="Pineapple"/>
+    <CheckBox
+        android:id="@+id/lettuce_checkBox"
+        android:layout_below="@id/pineapple_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckedBox"
+        android:text="Lettuce"/>
+    <CheckBox
+        android:id="@+id/pickles_checkBox"
+        android:layout_below="@id/lettuce_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckedBox"
+        android:text="Pickles"/>
+    <CheckBox
+        android:id="@+id/cheese_checkBox"
+        android:layout_below="@id/pickles_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckedBox"
+        android:text="Cheese"/>
+    <CheckBox
+        android:id="@+id/mustard_checkBox"
+        android:layout_below="@id/cheese_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckedBox"
+        android:text="Mustard"/>
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_below="@id/mustard_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Name"/>
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_below="@id/et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"/>
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_below="@+id/et1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Address"/>
+
+    <ImageButton
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_name"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
