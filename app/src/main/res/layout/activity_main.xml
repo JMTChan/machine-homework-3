@@ -88,21 +88,24 @@
         android:layout_below="@id/mustard_checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Name"/>
+        android:hint="Name"
+        android:inputType="textCapWords"/>
 
     <EditText
         android:id="@+id/et1"
         android:layout_below="@id/et"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Phone Number"/>
+        android:hint="Phone Number"
+        android:inputType="phone"/>
 
     <EditText
         android:id="@+id/et2"
         android:layout_below="@+id/et1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Address"/>
+        android:hint="Address"
+        android:inputType="textCapWords"/>
 
     <ImageButton
         android:id="@+id/add"

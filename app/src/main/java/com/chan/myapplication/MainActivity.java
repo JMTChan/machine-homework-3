@@ -15,17 +15,20 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 public class MainActivity extends AppCompatActivity {
-    private String select = "";
+
     Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         intent = new Intent(MainActivity.this, Main2Activity.class);
         RadioGroup rg = findViewById(R.id.type_group);
         final RadioButton chick = (RadioButton)findViewById(R.id.chicken);
         final RadioButton beef = (RadioButton)findViewById(R.id.beef);
+
+
 
         rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -46,6 +49,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                EditText et = findViewById(R.id.et);
+                EditText et1 = findViewById(R.id.et1);
+                EditText et2 = findViewById(R.id.et2);
+
+                String a = et.getText().toString();
+                String b = et1.getText().toString();
+                String c = et2.getText().toString();
+
+                intent.putExtra("na", a);
+                intent.putExtra("ad", c);
+                intent.putExtra("co", b);
+
                 startActivity(intent);
             }
         });
@@ -65,6 +80,26 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("pin", "Pineapple");
             }else {
                 intent.removeExtra("pin");
+            }break;
+            case R.id.lettuce_checkBox:if (checked){
+                intent.putExtra("let","Lettuce");
+            }else {
+                intent.removeExtra("let");
+            }break;
+            case R.id.pickles_checkBox:if (checked){
+                intent.putExtra("pic","Pickles");
+            }else {
+                intent.removeExtra("pic");
+            }break;
+            case R.id.cheese_checkBox:if (checked){
+                intent.putExtra("che","Cheese");
+            }else {
+                intent.removeExtra("che");
+            }break;
+            case R.id.mustard_checkBox:if (checked){
+                intent.putExtra("mus","Mustard");
+            }else {
+                intent.removeExtra("mus");
             }break;
         }
     }
